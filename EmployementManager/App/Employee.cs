@@ -1,24 +1,15 @@
 ﻿namespace EmployementManager.App;
 
-public class Employee
+public class Employee : Person
 {
-    private string name { get; set; }
     private string department { get; set; }
-    private decimal salary { get; set; }
-    private DateTime birthDate { get; set; }
 
-    public Employee(string name, string department, decimal salary, DateTime birthDate)
+    public Employee(string name, string department, decimal salary, DateOnly birthDate) : base(name,salary,birthDate)
     {
-        this.name = name;
         this.department = department;
-        this.salary = salary;
-        this.birthDate = birthDate;
     }
-    public void showData()
+    public string toString()
     {
-        Console.WriteLine($"Name: {this.name} ");
-        Console.WriteLine($"Department: {this.department} ");
-        Console.WriteLine($"Salary: {this.salary} ");
-        Console.WriteLine($"Birth Date: {this.birthDate} ");
+        return ($"Name: {base.Name}, Department: {this.department}, Salary: {base.Salary}, Birthdate: {base.DateOfBirth} ");
     }
 }

@@ -4,9 +4,9 @@ public class Person
 {
     public string Name { get; set; }
     public decimal Salary { get; set; }
-    public DateTime DateOfBirth { get; set; }
+    public DateOnly DateOfBirth { get; set; }
 
-    public Person(string name, decimal salary, DateTime dateOfBirth)
+    public Person(string name, decimal salary, DateOnly dateOfBirth)
     {
         Name = name;
         Salary = salary;
