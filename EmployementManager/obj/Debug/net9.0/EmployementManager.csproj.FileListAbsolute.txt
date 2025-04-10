@@ -1,0 +1,15 @@
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\bin\Debug\net9.0\EmployementManager.exe
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\bin\Debug\net9.0\EmployementManager.deps.json
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\bin\Debug\net9.0\EmployementManager.runtimeconfig.json
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\bin\Debug\net9.0\EmployementManager.dll
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\bin\Debug\net9.0\EmployementManager.pdb
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.AssemblyInfoInputs.cache
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.AssemblyInfo.cs
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.csproj.CoreCompileInputs.cache
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.sourcelink.json
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.dll
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\refint\EmployementManager.dll
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.pdb
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\EmployementManager.genruntimeconfig.cache
+D:\programming\C#\Codes_2025\EmployementManager\EmployementManager\obj\Debug\net9.0\ref\EmployementManager.dll

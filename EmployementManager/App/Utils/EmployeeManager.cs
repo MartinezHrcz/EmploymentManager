@@ -7,7 +7,6 @@ public class EmployeeManager
     public static Employee AddEmployee()
     {
         Console.WriteLine("New employee data:");
-        
         Console.Write("Employee name: ");
         string name = Console.ReadLine();
         
