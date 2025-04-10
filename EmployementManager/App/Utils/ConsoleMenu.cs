@@ -7,8 +7,7 @@ using EmployementManager;
 
 public class ConsoleMenu
 {
-    static private List<Employee> employees = new List<Employee>();
-    static private List<Manager> managers = new List<Manager>();
+
     static private bool exit = false;
     private static readonly string[] MENU_POINTS = new[]
     {
@@ -17,12 +16,14 @@ public class ConsoleMenu
         "3.Exit",
     };
 
+    
+
     public static void DisplayMainMenu()
     {
         do{
             Console.Clear();
             Console.WriteLine("Choose an option:");
-            MENU_POINTS.ToList().ForEach(Console.WriteLine);
+            MenuWriter.Show(MENU_POINTS);
             MenuInput();
         }
         while(!exit);
@@ -42,9 +43,10 @@ public class ConsoleMenu
         switch (input)
         {
             case "1":
-                employees.ForEach(employee =>Console.WriteLine(employee.Name));
+                EmployeeManager.Menu();
                 break;
             case "2":
+                ManagerManager.Menu();
                 break;
             case "3":
                 exit = true;
