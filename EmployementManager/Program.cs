@@ -2,3 +2,4 @@
 using EmployementManager.App.Utils;
 
 ConsoleMenu.DisplayMainMenu();
+

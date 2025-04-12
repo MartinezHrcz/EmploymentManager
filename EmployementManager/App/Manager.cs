@@ -2,8 +2,9 @@
 
 public class Manager : Person
 {
+    public string id { get; set; }
     private List<Employee> employees = new List<Employee>();
-    private string department;
+    public string department;
 
     public Manager(string name, decimal salary, DateOnly dateOfBirth, string department) : base(name, salary,
         dateOfBirth)
@@ -17,8 +18,8 @@ public class Manager : Person
         employees.Add(employee);
     }
 
-    public void ToString()
-    {
-        Console.WriteLine($"Name: {base.Name}, Salary: {base.Salary}, DateOfBirth: {base.DateOfBirth}, Employees: {employees.Count}");
+    public string toString()
+    { 
+        return $"Name: {base.Name}, Salary: {base.Salary}, DateOfBirth: {base.DateOfBirth}, Employees: {employees.Count}";
     }
 }
