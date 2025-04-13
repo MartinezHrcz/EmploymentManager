@@ -112,39 +112,44 @@ public class EmployeeManager
 
         Console.WriteLine("What do you want to update?");
         Console.WriteLine("Name = n \n Birthdate: b \n Salary: s \n Department: d ");
-        string updateInput = Console.ReadLine();
-        switch (updateInput)
+        char updateInput = ' ';
+        do
         {
-            case "n":
-                Console.WriteLine("New employee name:");
-                string name = Console.ReadLine();
-                employees.Find(x => x.id == emp.id).Name = name;
-                break;
-            case "b":
-                Console.WriteLine("New employee birthdate:");
-                string input = "";
-                DateOnly birthdate;
-                while (!DateOnly.TryParse(input, out birthdate))
-                {
-                    input = Console.ReadLine();
-                }
-                employees.Find(x=>x.id == emp.id).DateOfBirth = birthdate;
-                break;
-            case "s":
-                Console.WriteLine("New employee salary:");
-                decimal salary = Convert.ToDecimal(Console.ReadLine());
-                employees.Find(x=>x.id == emp.id).Salary = salary;
-                break;
-            case "d":
-                Console.WriteLine("New employee department:");
-                string department = Console.ReadLine();
-                employees.Find(x=>x.id == emp.id).department = department;
-                break;
-        }
+            updateInput = Console.ReadKey().KeyChar;
+            switch (updateInput.ToString().ToLower())
+            {
+                case "n":
+                    Console.WriteLine("New employee name:");
+                    string name = Console.ReadLine();
+                    employees.Find(x => x.id == emp.id).Name = name;
+                    break;
+                case "b":
+                    Console.WriteLine("New employee birthdate:");
+                    string input = "";
+                    DateOnly birthdate;
+                    while (!DateOnly.TryParse(input, out birthdate))
+                    {
+                        input = Console.ReadLine();
+                    }
+                    employees.Find(x=>x.id == emp.id).DateOfBirth = birthdate;
+                    break;
+                case "s":
+                    Console.WriteLine("New employee salary:");
+                    decimal salary = Convert.ToDecimal(Console.ReadLine());
+                    employees.Find(x=>x.id == emp.id).Salary = salary;
+                    break;
+                case "d":
+                    Console.WriteLine("New employee department:");
+                    string department = Console.ReadLine();
+                    employees.Find(x=>x.id == emp.id).department = department;
+                    break;
+                default:
+                    Console.WriteLine("Invalid input. Try again...");
+                    break;
+            }
+        } while (!"nbsd".Contains(updateInput));
+        
     }
 
-    public static List<Employee> GetEmployees()
-    {
-        return employees;
-    }
+    public static List<Employee> GetEmployees() => employees;
 }

@@ -1,4 +1,6 @@
-﻿namespace EmployementManager.App;
+﻿using EmployementManager.App.Utils;
+
+namespace EmployementManager.App;
 
 public class Manager : Person
 {
@@ -10,6 +12,22 @@ public class Manager : Person
         dateOfBirth)
     {
         this.department = department;
+        if (ManagerManager.GetManagers().Count != 0)
+        {
+            try
+            {
+                id = "MG" + (int.Parse(EmployeeManager.GetEmployees().Select(em => em.id).LastOrDefault().Replace("MG",""))+1);
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("Error generating employee id!");
+            }
+            
+        }
+        else
+        {
+            id = "MG0";
+        }
     }
     public List<Employee> Employees => employees;
 
@@ -18,8 +36,8 @@ public class Manager : Person
         employees.Add(employee);
     }
 
-    public string toString()
+    public string ToString()
     { 
-        return $"Name: {base.Name}, Salary: {base.Salary}, DateOfBirth: {base.DateOfBirth}, Employees: {employees.Count}";
+        return $"ID: {this.id}, Name: {base.Name}, Salary: {base.Salary}, DateOfBirth: {base.DateOfBirth}, Employees: {employees.Count}";
     }
 }
